@@ -142,6 +142,10 @@ nav ul {
   cursor: pointer;
 }
 
+.hide-display {
+  display: none;
+}
+
 /* Hero section */
 .hero-section {
   background-image: url(images/hero-image-background.png);
@@ -322,6 +326,8 @@ nav ul {
 }
 
 /* Search visible section */
+
+
 
 .search-visible-section {
   display: flex;
