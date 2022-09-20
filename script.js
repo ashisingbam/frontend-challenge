@@ -1,4 +1,8 @@
-let accountsData;
+const parentList = document.querySelectorAll('.parent-list-item')
+parentList.forEach(parent => parent.addEventListener('click', () => {
+  parent.classList.toggle('close-drop-down')
+}))
+
 const searchVisibleContainer = document.querySelector(
   ".search-visible-container"
 );
@@ -183,13 +187,24 @@ searchInput.addEventListener("input", (e) => {
 
 });
 
+const heroSection = document.querySelector('.hero-section-container')
+const featuredSection = document.querySelector('.featured-section-container')
+const testimonialSection = document.querySelector('.testimonials-container')
+
+
 searchInput.addEventListener("focus", () => {
   searchBar.classList.add("search-focus");
   searchVisibleSection.classList.add("search-focus");
+  heroSection.classList.toggle('hide-display')
+  featuredSection.classList.toggle('hide-display')
+  testimonialSection.classList.toggle('hide-display')
 });
 
 searchCloseIcon.addEventListener("click", () => {
   searchBar.classList.remove("search-focus");
   searchVisibleSection.classList.remove("search-focus");
   searchInput.value = "";
+  heroSection.classList.toggle('hide-display')
+  featuredSection.classList.toggle('hide-display')
+  testimonialSection.classList.toggle('hide-display')
 });
