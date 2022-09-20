@@ -207,4 +207,5 @@ searchCloseIcon.addEventListener("click", () => {
   heroSection.classList.toggle('hide-display')
   featuredSection.classList.toggle('hide-display')
   testimonialSection.classList.toggle('hide-display')
+  populateCompanies(allCompaniesData)
 });
